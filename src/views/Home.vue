@@ -1,18 +1,41 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="article">
+      <h1>Article FULLWAVE</h1>
+      <ul v-for="article in articles">
+        <li>{{ article.attributes.title }} </li>
+        <p v-if="article.attributes.body" v-html="article.attributes.body.value"></p>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import axios from 'axios';
 export default {
-  name: "home",
-  components: {
-    HelloWorld
+  name: "blog",
+  data() {
+    return {
+      articles: []
+    }
+  },
+
+  created() {
+    const _this = this;
+    // `this` est une référence à l'instance de vm
+    axios.get('http://37.139.25.243/jsonapi/node/article')
+            .then(function (response) {
+              // handle success
+              console.log(response);
+              _this.articles = response.data.data;
+            })
   }
 };
 </script>
+
+<style lang="scss">
+  .article{
+    position: relative;
+  }
+</style>
