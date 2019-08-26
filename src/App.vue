@@ -31,7 +31,7 @@
         </nav>
         <div class="ban">
             <div class="slogan">Présentation</div>
-            <img src="../src/assets/ban2.jpg">
+            <img src="../src/assets/ban22.jpg">
         </div>
         <router-view/>
         <footer class="main-footer">
@@ -136,22 +136,18 @@
 </style>
 
 <script>
-
     export default {
         el: '#app',
         data() {
             return {
                 show: false,
-
             }
         },
         methods: {
           navresponsive: function () {
             this.show = !this.show;
-
           }
         }
     }
-
 </script>
 

@@ -73,11 +73,9 @@ export default {
   .article{
     position: relative;
   }
-
   .article{
     padding: 30px;
   }
-
   .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -92,7 +90,7 @@ export default {
     &.two {
       grid-column: 1 / 5;
       grid-row: 1 / 4;
-      background: url("../assets/ban1.png");
+      background: url("../assets/ban11.png");
       background-size: cover;
       transition: all 0.2s ease-in-out;
       &:hover{ transform: scale(1.1);}
@@ -100,7 +98,7 @@ export default {
     &.three {
       grid-column: 1 / 3 ;
       grid-row: 1 / 5;
-      background: url("../assets/dec.jpg");
+      background: url("../assets/deco.jpg");
       background-size: cover;
       transition: all 0.2s ease-in-out;
       &:hover{ transform: scale(1.1);}
