@@ -1,4 +1,4 @@
-# yakoubi.netlify.com
+# yakoubi.com
 
 ## Project setup
 ```
