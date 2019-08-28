@@ -1,50 +1,49 @@
 <template>
-  <div class="about">
-    <select v-model="selected" multiple>
-      <option disabled value="">Choisissez</option>
-      <option>A</option>
-      <option>B</option>
-      <option>C</option>
-    </select>
-    <span>Sélectionné : {{ selected }}</span>
+    <div class="about">
+            <div class="wr">
+                <div class="txt">
+                    <h1>Fullwave</h1>
+                    <h2>
+                        EXPERTISES: DRUPAL 7 & 8, PRESTASHOP, EMAILING, SEO...
+                    </h2>
+                    <ul>
+                        <li> Gestion de projet web</li>
+                        <li> Conseil, audit et accompagnement à la conception</li>
+                        <li> Charte graphique</li>
+                        <li> Conception de l'identité graphique (web, flyers, carte de visites...)</li>
+                        <li> Web design</li>
+                        <li> Charte graphique adaptée au standards web (W3C)</li>
+                        <li> Intégration</li>
+                        <li> Découpage et integration de maquettes : HTML5, CSS3, jQuery, Node.js</li>
+                    </ul>
+                </div>
+              <div class="image three" data-aos="fade-down-left"></div>
 
-    <h1>This is an about page</h1>
-    <div class="row">
-      <div class="col-6">
-        <p>
-          Unlock the power of Git LFS in your Netlify workflow. Git stores
-          pointer files in your repository, then uploads the real files to our
-          asset server. Upload images at high resolution, then serve exactly the
-          size you need in your site using image transformations on the fly.
-        </p>
-      </div>
-      <div class="col-6">
-        Unlock the power of Git LFS in your Netlify workflow. Git stores pointer
-        files in your repository, then uploads the real files to our asset
-        server. Upload images at high resolution, then serve exactly the size
-        you need in your site using image transformations on the fly.
-      </div>
-    </div>
-    <div class="count">{{ second }}</div>
-  </div>
+              <!--    <div class="count">{{ second }}</div>-->
+            </div>
+        </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import axios from "axios";
-export default {
-  name: "blog",
-  data() {
-    return {
-      selected: "",
-      second: 0
-    };
-  },
+    // @ is an alias to /src
+    import axios from "axios";
 
-  mounted: function() {
-    setInterval(() => {
-      this.second++;
-    }, 1000);
-  }
-};
+    export default {
+        name: "blog",
+        data() {
+            return {
+                // second: 0,
+
+            };
+        },
+
+        mounted: function () {
+            // setInterval(() => {
+            //  this.second++;
+            //},500)
+        }
+    };
 </script>
+<style lang="scss">
+
+</style>

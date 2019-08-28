@@ -22,9 +22,10 @@
                     <br/>
                 </div>
                 <div v-else class="nav">
-                    <router-link class="b" to="/">Home</router-link>
-                    <router-link class="b" to="/about">About</router-link>
+                    <router-link class="b" to="/">Accueil</router-link>
+                    <router-link class="b" to="/about">Qui somme-Nous</router-link>
                     <router-link class="b" to="/blog">blog</router-link>
+                    <router-link class="b" to="/contact">Nous-contactez</router-link>
                 </div>
             </div>
         </nav>
@@ -34,7 +35,6 @@
         </div>
         <router-view/>
         <footer class="main-footer">
-            <div class="container">
                 <div class="wr1">
                     <div class="plan">
                         <h2>Liens</h2>
@@ -67,12 +67,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer2">
+                <div class="footer2 container">
                     <p class="text-muted">
                         Copyright 2019 © Fullwave Technology, All right reserved
                     </p>
                 </div>
-            </div>
         </footer>
     </div>
 </template>
@@ -84,7 +83,12 @@
         -moz-osx-font-smoothing: grayscale;
         color: #2c3e50;
     }
-
+    .container {
+        width: 1150px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
     body {
         margin: 0;
     }
@@ -122,11 +126,14 @@
         }
 
     }
-
-    .ban img {
+    .ban{
+        position: relative;
+        margin-bottom: -4px;
+        padding: 0;
+    img {
         width: 100%;
     }
-
+    }
     .slogan {
         position: absolute;
         top: 165px;
@@ -169,7 +176,7 @@
     }
 
     .nav {
-        grid-column: 4/ 5;
+        grid-column: 3/ 5;
         grid-row: 1;
         padding-top: 15px;
     }

@@ -1,7 +1,7 @@
 <template>
     <div class="home">
-        <div class="wrapper">
-            <div class="txt1" v-if="visible" data-aos="fade-left">
+        <div class="wrapper ">
+            <div class="txt1" data-aos="fade-up">
                 <h1>Article1</h1>
                 <p>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -13,13 +13,13 @@
                     culpa qui officia deserunt mollit anim id est laborum
                 </p>
             </div>
-            <div class="image six"></div>
+            <div class="image six" data-aos="fade-up"></div>
         </div>
 
         <div class="wrapper">
-            <div class="image three" data-aos="fade-down-left"></div>
+            <div class="image three" data-aos="fade-up"></div>
             <transition name="bounce">
-                <div class="txt" v-if="visible" data-aos="fade-up-right">
+                <div class="txt"  data-aos="fade-up">
                     <h1>Article2</h1>
                     <p>
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -34,7 +34,7 @@
             </transition>
         </div>
 
-        <div class="article" data-aos="zoom-in">
+        <div class="article" data-aos="fade-up">
             <h1>Articles</h1>
             <ul v-for="article in articles">
                 <li>{{ article.attributes.title }}</li>
@@ -42,14 +42,14 @@
             </ul>
         </div>
 
-        <div class="wrapper wrapper2">
+        <div class="wrapper wrapper2 container">
             <div class="image two"></div>
-            <div class="image five" data-aos="zoom-out-down"></div>
-            <div class="image four" data-aos="zoom-out-up"></div>
-            <div class="image seven" data-aos="zoom-out-up"></div>
-            <div class="image eight" data-aos="zoom-out-down"></div>
+            <div class="image five" data-aos="fade-up"></div>
+            <div class="image four" data-aos="fade-up"></div>
+            <div class="image seven" data-aos="fade-up"></div>
+            <div class="image eight" data-aos="fade-up"></div>
         </div>
-    </div>
+        </div>
 </template>
 
 <script>
@@ -62,7 +62,6 @@
         data() {
             return {
                 articles: [],
-                visible: true
             };
         },
         created() {
@@ -84,7 +83,6 @@
         position: relative;
         padding: 30px;
     }
-
     .wrapper {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -162,15 +160,15 @@
         grid-column: 3 / 5;
         grid-row: 1 / 5;
         text-align: justify;
-        padding: 55px;
+        padding: 20px;
     }
 
     .txt {
         grid-column: 1 / 3;
         grid-row: 1 / 5;
         text-align: justify;
-        padding: 55px;
         transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
+        padding: 20px;
     }
 
     @keyframes swinging {
