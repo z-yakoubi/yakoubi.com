@@ -22,16 +22,14 @@
                     <br/>
                 </div>
                 <div v-else class="nav">
-                    <router-link class="b" to="/">Accueil</router-link>
+                    <router-link class="b" to="/">blog</router-link>
                     <router-link class="b" to="/about">Qui somme-Nous</router-link>
-                    <router-link class="b" to="/blog">blog</router-link>
                     <router-link class="b" to="/contact">Nous-contactez</router-link>
                 </div>
             </div>
         </nav>
         <div class="ban">
             <div class="slogan">Fullwave</div>
-            <img src="../src/assets/ban22.jpg"/>
         </div>
         <router-view/>
         <footer class="main-footer">
@@ -128,18 +126,14 @@
     }
     .ban{
         position: relative;
-        margin-bottom: -4px;
-        padding: 0;
-    img {
-        width: 100%;
-    }
-    }
-    .slogan {
-        position: absolute;
-        top: 165px;
-        color: white;
-        font-size: 50px;
-        padding: 0 10%;
+        height: 300px;
+        background: #d7ecfa;
+        .slogan {
+            position: relative;
+            font-size: 80px;
+            text-align: center;
+            top: 50%;
+        }
     }
 
     .navbar-nav {

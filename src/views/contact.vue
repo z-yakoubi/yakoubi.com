@@ -1,47 +1,26 @@
 <template>
     <div class="contact">
-    <form
-            id="contact"
-            @submit="checkForm"
-            action="https://vuejs.org/"
-            method="post"
-    >
-
-        <p v-if="errors.length">
+    <form id="contact" @submit="checkForm" action="https://vuejs.org/" method="post">
+        <div v-if="errors.length">
             <b>Please correct the following error(s):</b>
         <ul>
             <li v-for="error in errors">{{ error }}</li>
         </ul>
-        </p>
+        </div>
 
         <p>
             <label for="name">Name</label>
-            <input
-                    id="name"
-                    v-model="name"
-                    type="text"
-                    name="name"
-            >
+            <input id="name" v-model="name" type="text" name="name">
         </p>
 
         <p>
             <label for="age">Age</label>
-            <input
-                    id="age"
-                    v-model="age"
-                    type="number"
-                    name="age"
-                    min="0"
-            >
+            <input id="age" v-model="age" type="number" name="age" min="0">
         </p>
 
         <p>
             <label for="movie">Favorite Movie</label>
-            <select
-                    id="movie"
-                    v-model="movie"
-                    name="movie"
-            >
+            <select id="movie" v-model="movie" name="movie">
                 <option>Star Wars</option>
                 <option>Vanilla Sky</option>
                 <option>Atomic Blonde</option>
@@ -49,12 +28,8 @@
         </p>
 
         <p>
-            <input
-                    type="submit"
-                    value="Submit"
-            >
+            <input type="submit" value="Submit">
         </p>
-
     </form>
     </div>
 </template>
