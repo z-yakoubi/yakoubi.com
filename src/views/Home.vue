@@ -2,7 +2,11 @@
     <div class="grid-container">
         <div class="grid-x align-center">
             <div class="cell medium-8">
-                <div class="blog-post" v-for="(article, index) in articles">
+                <div
+                        class="blog-post"
+                        v-for="(article, index) in articles"
+                        :key="index"
+                >
                     <h3>
                         {{ article.title }}
                         <small>{{ $d(new Date(article.created), "short", "fr-FR") }}</small>

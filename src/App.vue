@@ -15,7 +15,9 @@
         <div class="callout large primary">
             <div class="text-center">
                 <h1>FULLWAVE</h1>
-                <h2 class="subheader">AGENCE WEB PARIS & CASABLANCA - EXPERTE DRUPAL</h2>
+                <h2 class="subheader">
+                    AGENCE WEB PARIS & CASABLANCA - EXPERTE DRUPAL
+                </h2>
             </div>
         </div>
         <router-view/>

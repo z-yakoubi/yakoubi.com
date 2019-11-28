@@ -4,9 +4,9 @@ import router from "./router";
 import store from "./store";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import 'foundation-sites/dist/css/foundation.min.css'
+import "foundation-sites/dist/css/foundation.min.css";
 import i18n from "./i18n";
-import 'foundation-sites'
+import "foundation-sites";
 Vue.config.productionTip = false;
 
 new Vue({
