@@ -3,29 +3,23 @@
     <nav class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
-          <li class="menu-text">
-            <router-link to="/">Blog</router-link>
-          </li>
-          <li class="menu-text">
-            <router-link to="/contact">Nous contactez</router-link>
-          </li>
+          <li class="menu-text">Blog</li>
         </ul>
       </div>
     </nav>
     <div class="callout large primary">
       <div class="text-center">
-        <h1>FULLWAVE</h1>
+        <h1>Fullwave</h1>
         <h2 class="subheader">
-          AGENCE WEB PARIS & CASABLANCA - EXPERTE DRUPAL
+          Agence Web Paris & Casablanca - Experte Drupal
         </h2>
       </div>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
-  .thumbnail {
-    width: 100%;
-  }
+@import "~foundation-sites/scss/foundation";
+@include foundation-everything;
 </style>
