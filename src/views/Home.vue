@@ -3,17 +3,18 @@
     <div class="grid-x align-center">
       <div class="cell medium-8">
         <div
-                class="blog-post"
-                v-for="(article, index) in articles"
-                :key="index"
+          class="blog-post"
+          v-for="(article, index) in articles"
+          :key="index"
         >
           <h3>
             {{ article.title }}
             <small>{{ $d(new Date(article.created), "short", "fr-FR") }}</small>
           </h3>
           <img
-                  class="thumbnail"
-                  v-bind:src="
+            class="thumbnail"
+            width="100%"
+            v-bind:src="
               `https://dev-fullwaveagency.pantheonsite.io${article.field_image.uri.url}`
             "
           />
@@ -33,4 +34,23 @@
     </div>
   </div>
 </template>
-<script type="module" src="../ax.js"></script>
+
+<script>
+export default {
+  computed: {
+    articles() {
+      return this.$store.getters.getResourcesByType("node--article");
+    }
+  },
+  asyncData({ store: { dispatch, getters } }) {
+    if (getters.getResourcesByType("node--article")) return;
+
+    return dispatch("fetchResources", {
+      resource: "node/article",
+      params: {
+        include: "field_image,uid"
+      }
+    });
+  }
+};
+</script>
